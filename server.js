@@ -7,7 +7,10 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: [
+      "http://localhost:3000",
+      "https://effulgent-axolotl-e21d3d.netlify.app",
+    ],
   })
 );
 app.get("/invoices", async (req, res) => {
